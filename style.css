@@ -4,7 +4,7 @@ body {
     font-family: 'Economica', sans-serif;
 }
 
-.showpokemon {
+.showpokemon h1 {
     color: white;
 }
 
@@ -19,8 +19,12 @@ body {
 }
 
 .pokeimg {
-    width: 150px;
-    height: 150px;
+    height: 130px;
+}
+
+.pokeimg:hover {
+    transform: scaleY(1.3);
+    transform: scaleX(1.3);
 }
 
 .pokesh {
@@ -87,10 +91,346 @@ th {
     font-size: 25px;
 }
 
+td {
+    font-size: 20px;
+}
+
 .text {
     background-color: rgb(241, 239, 239);
 }
 
 .max {
     max-width: 300px;
+}
+
+p.back {
+    margin-top: 0;
+    margin-bottom: -2rem;
+}
+
+
+/* Ladeanimation Text          
+  
+  
+  
+  
+  
+  */
+
+.loading {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: ‘Arial Narrow’, sans-serif;
+    font-weight: 100;
+    font-size: 2.3em;
+    color: black;
+}
+
+span {
+    position: relative;
+    top: 0.63em;
+    display: inline-block;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: rotateX(-90deg);
+}
+
+.let1 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+.let2 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.3s;
+}
+
+.let3 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.4s;
+}
+
+.let4 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.let5 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.6s;
+}
+
+.let6 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.7s;
+}
+
+.let7 {
+    animation: drop 1.2s ease-in-out infinite;
+    animation-delay: 1.8s;
+}
+
+@keyframes drop {
+    10% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    80% {
+        opacity: 1;
+        top: 3.78em;
+        transform: rotateX(-360deg);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        top: 6.94em
+    }
+}
+
+
+/* Ladeanimation Pokemon             
+  
+  
+  
+  
+  
+  */
+
+.text-center {
+    text-align: center;
+}
+
+svg {
+    width: 60%;
+    margin-top: 30px;
+}
+
+.st1,
+.st11 {
+    fill: #FFD400;
+}
+
+.st2 {
+    fill: #FFB000;
+}
+
+.st3 {
+    fill: #33363A;
+}
+
+.st4 {
+    fill: #FFF800;
+}
+
+.st5 {
+    fill: #FF1A1A;
+}
+
+.st6 {
+    fill: #D61D1D;
+}
+
+.st7 {
+    fill: #6D5C4D;
+}
+
+.st8 {
+    fill: #FFFFFF;
+}
+
+.st9,
+.st91 {
+    fill: #F7931E;
+}
+
+#cuerpo {
+    animation: rubberBand 1.5s linear infinite;
+    transform-origin: center center;
+}
+
+#cachete-rojo-izq {
+    animation: rubberBand 1.5s linear infinite;
+    transform-origin: center center;
+}
+
+#cachete-rojo-der {
+    animation: rubberBand 1.5s linear 0.3s infinite;
+    transform-origin: center center;
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.05, 0.90, 1);
+    }
+    40% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    65% {
+        transform: scale3d(1, 1, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.90, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+#oreja-izq {
+    animation: orejitas 0.5s ease-in-out alternate infinite;
+    transform-origin: center bottom;
+}
+
+#oreja-der {
+    animation: orejitas 0.5s ease-in-out alternate 0.2s infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes orejitas {
+    0% {
+        transform: rotateX(7deg);
+    }
+    100% {
+        transform: rotateX(50deg);
+    }
+}
+
+#patita-izq {
+    animation: patitas 0.4s ease-in-out alternate 0.1s infinite;
+}
+
+#patita-der {
+    animation: patitas 0.3s ease-in-out alternate infinite;
+}
+
+@keyframes patitas {
+    0% {
+        transform: translateY( -5px)
+    }
+    100% {
+        transform: translateY( -8px)
+    }
+}
+
+#iris-derecho,
+#iris-izquierdo {
+    animation: iris 4.4s ease-in-out alternate infinite;
+}
+
+@keyframes iris {
+    0% {
+        transform: translateX(3px)
+    }
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+#nariz {
+    animation: nariz 1s linear alternate infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes nariz {
+    0% {
+        transform: scale(0.9);
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: scale(1);
+        transform: rotate(-5deg);
+    }
+}
+
+#cola {
+    animation: nariz 0.5s ease-in-out alternate infinite;
+    transform-origin: center bottom;
+}
+
+#rayos .st91 {
+    animation: rayitos 2.5s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+#rayos .st9 {
+    animation: rayitos 3s ease-in-out 0.2s infinite;
+    transform-origin: center bottom;
+}
+
+#rayos .st11 {
+    animation: rayitos 3s ease-in-out 0.4s infinite;
+    transform-origin: center bottom;
+}
+
+#rayos .st1 {
+    animation: rayitos 3s ease-in-out 0.8s infinite;
+    transform-origin: center bottom;
+}
+
+#rayos .st2 {
+    animation: rayitos 1s ease-in-out alternate 0.9s infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes rayitos {
+    from,
+    11.1%,
+    to {
+        -webkit-transform: none;
+        transform: none;
+        transform: translateY(-10px);
+        transform: scale(10px);
+    }
+    22.2% {
+        -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
+        transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+    33.3% {
+        -webkit-transform: skewX(6.25deg) skewY(6.25deg);
+        transform: skewX(6.25deg) skewY(6.25deg);
+    }
+    44.4% {
+        -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
+        transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+    55.5% {
+        -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
+        transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+    66.6% {
+        -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
+        transform: skewX(-0.78125deg) skewY(-0.78125deg);
+        transform: translateY(-60px);
+    }
+    77.7% {
+        -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
+        transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+    88.8% {
+        -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+        transform: translateY(-80px);
+        opacity: 0;
+    }
 }

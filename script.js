@@ -21,11 +21,14 @@
  const allPokemonObj = [] 
 
 
+
+
  let getPokemon = async() => {
      for (let i = 1; i <= allPokemons; i++) {
          await loadPokemon(i);
 
      }
+
      renderPokemon(allPokemonObj);
      document.getElementById('roll').classList.add('display-none');
  }
